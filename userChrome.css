@@ -1,33 +1,40 @@
-* {
-  font-family: Iosevka Web, Consolas, Courier, monospace;
-  --main-color: #191919;
-  --secondary-color: #346751;
+:root {
+  --main-color: #080708;
+  --secondary-color: #F1F0CC;
+  --white-color: #F1F0CC;
+  
+  --tab-selected-bgcolor: #f1f0cc;
+  --transparent-color: transparent;
+  --hover-bgcolor: #cda9f18f;
 }
+
+* {
+  font-family: Source Code Pro, Consolas, Courier, monospace;
+}
+
 html,
 body {
-  color: var(--secondary-color) I !important;
+  color: var(--secondary-color) !important;
   --tab-shadow-max-size: 0px !important;
   --tab-block-margin: 0px !important;
 }
+
 #bookmarks-menu,
 tab {
-  font-size: 18px !important;
+  font-size: 12px !important;
 }
+
 ::-moz-placeholder {
   color: red;
   opacity: 0 !important;
   display: none !important;
 }
 
-.tab-icon-image {
-  display: none;
-}
-
 #urlbar {
-  font-size: 22px !important;
-  color: white !important;
-  font-family: Iosevka Web, Consolas, Courier, monospace;
-  background-color: #191919;
+  font-size: 12px !important;
+  color: var(--white-color) !important;
+  font-family: Source Code Pro, Consolas, Courier, monospace;
+  background-color: var(--main-color);
 }
 
 #urlbar-input-container:focus {
@@ -35,8 +42,8 @@ tab {
 }
 
 #searchbar {
-  font-size: 22px !important;
-  color: white !important;
+  font-size: 12px !important;
+  color: var(--white-color) !important;
 }
 
 #PersonalToolbar,
@@ -47,7 +54,7 @@ tab {
 #urlbar:focus,
 #urlbar-input {
   background-color: var(--main-color) !important;
-  color: #346751 !important;
+  color: var(--secondary-color) !important;
 }
 
 #identity-box {
@@ -56,23 +63,36 @@ tab {
 }
 
 .titlebar-close {
-  list-style-image: url(https://cdn-icons-png.flaticon.com/512/14035/14035711.png) !important;
+  list-style-image: url(img/red-circle.png) !important;
   padding: 0px !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
 }
 
+.titlebar-close:hover {
+  list-style-image: url(img/red-circle-hover.png) !important; /* Image on hover */
+}
+
 .titlebar-max,
 .titlebar-restore {
-  list-style-image: url(https://cdn-icons-png.flaticon.com/512/14035/14035769.png) !important;
+  list-style-image: url(img/green-circle.png) !important;
   margin-left: 20px !important;
   padding: 0 !important;
+}
+
+.titlebar-max:hover,
+.titlebar-restore:hover {
+  list-style-image: url(img/green-circle-hover.png) !important; /* Image on hover */
 }
 
 .titlebar-min {
   -moz-default-appearance: -moz-window-button-maximize;
   list-style-image: url(img/yellow-circle.png) !important;
   padding: 0 !important;
+}
+
+.titlebar-min:hover {
+  list-style-image: url(img/yellow-circle-hover.png) !important; /* Image on hover */
 }
 
 .titlebar-button {
@@ -82,8 +102,9 @@ tab {
   }
 }
 
+
 .titlebar-button:hover {
-  background-color: transparent !important;
+  background-color: var(--transparent-color) !important;
   border-radius: 10px !important;
 }
 
@@ -93,7 +114,7 @@ tab:is([visuallyselected], [multiselected]) {
 }
 
 :root:not(:-moz-lwtheme) {
-  --tab-selected-bgcolor: rgba(20, 80, 20, 0.174) !important;
+  --tab-selected-bgcolor: var(--tab-selected-bgcolor) !important;
 }
 
 #import-button {
@@ -106,6 +127,6 @@ tab:is([visuallyselected], [multiselected]) {
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   &:not([disabled], [open]):hover {
-    background-color: rgba(20, 80, 20, 0.174) !important;
+    background-color: var(--hover-bgcolor) !important;
   }
 }

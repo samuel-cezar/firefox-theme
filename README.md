@@ -1,5 +1,5 @@
-# greenyfox
-My CSS stylesheets for firefox.
+# :3
+My CSS Definitions for Firefox Developer Edition
 
-![greenyfox](https://i.imgur.com/DGTAHYA.png)
+![Screenshot of theme](https://i.imgur.com/jb0re6A.png)
 
